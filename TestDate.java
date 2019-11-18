@@ -17,7 +17,12 @@ class TestDate {
         int year = sc.nextInt();
         sc.close();
 
-        // TODO : your code after this line
-        
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy MMM dd");
+        Calendar calendar = new GregorianCalendar(year,month -1,day);
+        Date date = calendar.getTime();
+        System.out.println("the date is : " + sdf.format(date));
+        int dayOfWeek = calendar.get(Calendar.DAY_OF_WEEK);
+        System.out.println("the day of week is : " + dayOfWeek);
+
     }
 }
